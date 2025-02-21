@@ -7,102 +7,52 @@
 
 <body>
 
-<p align="center"><span style="font-size: x-large;">Information and Pricein Dynamic Financial Markets</span></p>
-<p align="center"><font size="4">This is a set of computer codes that computes equilibrium strategies for <a title="" href="https://www.sciencedirect.com/science/article/abs/pii/S016518892100021X">Price manipulation, dynamic informed trading, and the uniqueness of equilibrium in sequential trading</a> (Journal of Economic Dynamic and Control, 2021)
-<div id="Codes">
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec1_IntroMoney.pdf"><span style="font-size: large;">mainprog.m</span></a> This program solves the equilibrium.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec2_Fund.pdf"><span style="font-size: large;">plotfig.m</span></a> This program produces pictures from the result
-(**.mat).</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec3_Investment.pdf"><span style="font-size: large;">savere.m</span></a> This program saves the simulation results.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec4_Info.pdf"><span style="font-size: large;">jactry.m</span></a> This program is used to check the bug whenever any
-issue arises.</p>
-<div id="Functions">  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec5_Risk.pdf"><span style="font-size: large;">nextvalue.m</span></a> nextvalue(x, int, b, m, f) computes the value of a
-function = m(int)*(x-b(int))+f(int)</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">ask.m</span></a> ask(b, u, r, hb, ls) computes ask price via Bayes' rule.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec6_CAPM.pdf"><span style="font-size: large;">bid.m</span></a> bid(b, u, r, hb, ls) computes bid price via Bayes' rule.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec8_Crises.pdf"><span style="font-size: large;">fd.m</span></a> fd(x0, x1, b, f) finds the interval [b(j), b(j+1)) to
-which the value f belongs to. The first j starts at x0 and
-continues up to x1.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec9_Regul.pdf"><span style="font-size: large;">profits.m</span></a> [LB, LS, HB, HS] = profits(bi, as, b, I, N, vl, vh)
-returns profit for each strategy to both types given price and
-value functions.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec10_Defi.pdf"><span style="font-size: large;">incentive.m</span></a> incentive(u, r, I, N, b, mL, VL, mH, VH) returns
-[Regime, bi, as]. Regime = 1 if the honest strategy is incentive
-compatible and otherwise Regime = 0. bi is a bid price and as is an
-ask price if Regime = 1 and both take on 0 otherwise. It needs the
-following files: highbuy.m, highsell.m, lowbuy.m, and lowsell.m.</p>
+<p align="center"><span style="font-size: x-large;">Information and Price in Dynamic Financial Markets</span></p>
+<p align="center"><font size="4">This is a set of computer codes that computes equilibrium strategies for 
+<a title="" href="https://www.sciencedirect.com/science/article/abs/pii/S016518892100021X">Price manipulation, dynamic informed trading, and the uniqueness of equilibrium in sequential trading</a> 
+(Journal of Economic Dynamic and Control, 2021)
+</font></p>
 
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">highbuy.m </span></a> This
-computes profit for High to buy.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">highsell.m</span></a> This
-computes profit for High to sell.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">lowbuy.m</span></a> This
-computes profit for Low to buy.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">lowsell.m</span></a> This
-computes profit for Low to sell.</p>
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">checkH.m</span></a> [Regime, bid, ask, stHB] = checkH(u, r, L, I, b, N,
-mL, VL, mH, VH) Regime = 1 if type H manipulates and otherwise
-Regime = 0. bi is a bid price and as is an ask price if Regime = 1
-and both take on 0 otherwise. stHB returns the strategy that type H
-would take. It needs the following files: calaskH.m, calbidH.m, and
-(fd.m, lowbuy.m, lowsell.m).</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">checkL.m</span></a> [Regime, bid, ask, stLS] = checkL(u, r, H, I, b, N,
-mL, VL, mH, VH) Regime = 1 if type L manipulates and otherwise
-Regime = 0. bi is a bid price and as is an ask price if Regime = 1
-and both take on 0 otherwise. stLS returns the strategy that type L
-would take. It needs the following files: calaskL.m, calbidL.m, and
-(fd.m, highbuy.m, highsell.m).</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">calaskH.m</span></a> calaskH(I, L, N, b, mH, VH) finds ask price which
-satisfies the indifference condition for type H. It needs
-sol2real.m</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">calbidH.m</span></a> From calaskH.m this computes bid price.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">calaskL.m</span></a> calaskL(I, L, N, b, mH, VH) finds ask price which
-satisfies the indifference condition for type L. It needs
-sol2real.m</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">calbidL.m</span></a> From calaskL.m this computes bid price.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">sol2real.m</span></a> [xP, xM] = sol2real(a, b, c). sol2real.m returns
-two solutions xP and xM to solve ax^2 + b^x + c = 0. xP is the one
-with plus sign for square root for the quadratic solution and xM is
-the one with minus sign.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">diffun.m</span></a> [xL, xH, LS, LB, HS, HB] = diffun(u, r, i, b, h, l,
-ml, mh, vl, vh) returns profit from each strategy (LS, LB, HS, HB)
-and xH and xL are the differences of profits between honest to
-manipulative strategies. It needs ask.m, bid.m and fd.m.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">fixedHL.m</span></a> [newh, newl] = fixedHL(u, r, I, b, N, ml, vl, mh,
-vh,tol) returns strategies for type H and type L when both types
-manipulate. It needs diffun.m, fdminus.m, fdminus2.m, myfunHL.m,
-and jacHL.m</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">myfunHL.m</span></a> [fH, fL] = myfunHL(u, r, h, l, I, b, N, ml, vl, mh,
-vh) computes the values of two approximated indifference
-conditions. It needs ask.m, bid.m and fd.m.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">jacHL.m</span></a> jacHL(u, r, h, l, I, b, N, ml, vl, mh, vh) returns
-Jacobian matrix for Newton-Raphson method.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">value1.m</span></a> [VLn, VHn] = value1(I, as, bi, b, u, r, N, mL, VL,
-mH, VH) returns today's values for type L and type H. It needs
-fd.m, nextvalue.m, lowsell.m and highbuy.m.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">valueL.m</span></a> valueL(bd, u, r, va, vb) returns today's value for
-type L given bd = bid price.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">valueH.m</span></a> valueH(ak, u, r, va, vb) returns today's value for
-type H given ak = ask price.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">fdminus.m</span></a> fdminus(Kmat) returns finds possible x to make
-Kmat(k,j)= b(j) with x in [j-1, j) given k. Kmat does not need to
-be square.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">fdminus2.m</span></a> fdminus2(Kmat) returns possible x to make
-Kmat(k,j)= j, Kmat(k,j-1)= j-1 with x in [j-1, j) given k. Kmat
-does not need to be square.</p>  
-<p><a title="" href="https://shinotakayama.github.io/2103new/Lec7_Behav.pdf"><span style="font-size: large;">newtonHL.m</span></a> [oldh, oldl] = newtonHL(u, r, inih, inil, I, b, N,
-ml, vl, mh, vh, tol) returns the solution from the Newton-Raphson
-method. The maximum iteration is set at tol. oldh is a type-H's
-strategy and oldl is a type-L's strategy. This needs myfunHL.m and
-jacHL.m.</p>  
+<div id="Codes">
+<p><a title="" href="mainprog.m"><span style="font-size: large;">mainprog.m</span></a> This program solves the equilibrium.</p>
+<p><a title="" href="savere.m"><span style="font-size: large;">savere.m</span></a> This program saves the simulation results.</p>
+<p><a title="" href="jacHL.m"><span style="font-size: large;">jacHL.m</span></a> This program is used to check the bug whenever any issue arises.</p>
+
+<div id="Functions">  
+<p><a title="" href="nextvalue.m"><span style="font-size: large;">nextvalue.m</span></a> nextvalue(x, int, b, m, f) computes the value of a function.</p>
+<p><a title="" href="ask.m"><span style="font-size: large;">ask.m</span></a> ask(b, u, r, hb, ls) computes ask price via Bayes' rule.</p>  
+<p><a title="" href="bid.m"><span style="font-size: large;">bid.m</span></a> bid(b, u, r, hb, ls) computes bid price via Bayes' rule.</p>
+<p><a title="" href="fd.m"><span style="font-size: large;">fd.m</span></a> fd(x0, x1, b, f) finds the interval to which the value f belongs.</p>
+<p><a title="" href="incentive.m"><span style="font-size: large;">incentive.m</span></a> Computes incentive compatibility.</p>
+
+<p><a title="" href="highbuy.m"><span style="font-size: large;">highbuy.m</span></a> Computes profit for High to buy.</p>
+<p><a title="" href="highsell.m"><span style="font-size: large;">highsell.m</span></a> Computes profit for High to sell.</p>
+<p><a title="" href="lowbuy.m"><span style="font-size: large;">lowbuy.m</span></a> Computes profit for Low to buy.</p>
+<p><a title="" href="lowsell.m"><span style="font-size: large;">lowsell.m</span></a> Computes profit for Low to sell.</p>
+
+<p><a title="" href="checkH.m"><span style="font-size: large;">checkH.m</span></a> Determines whether type H manipulates.</p>  
+<p><a title="" href="checkL.m"><span style="font-size: large;">checkL.m</span></a> Determines whether type L manipulates.</p>  
+
+<p><a title="" href="calaskH.m"><span style="font-size: large;">calaskH.m</span></a> Finds ask price for type H.</p>  
+<p><a title="" href="calbidH.m"><span style="font-size: large;">calbidH.m</span></a> Computes bid price from calaskH.m.</p>  
+<p><a title="" href="calaskL.m"><span style="font-size: large;">calaskL.m</span></a> Finds ask price for type L.</p>  
+<p><a title="" href="calbidL.m"><span style="font-size: large;">calbidL.m</span></a> Computes bid price from calaskL.m.</p>  
+
+<p><a title="" href="sol2real.m"><span style="font-size: large;">sol2real.m</span></a> Solves ax^2 + bx + c = 0 for two solutions.</p>  
+<p><a title="" href="diffun.m"><span style="font-size: large;">diffun.m</span></a> Computes profit differences between strategies.</p>  
+<p><a title="" href="fixedHL.m"><span style="font-size: large;">fixedHL.m</span></a> Returns strategies for type H and L when both manipulate.</p>  
+<p><a title="" href="myfunHL.m"><span style="font-size: large;">myfunHL.m</span></a> Computes approximated indifference conditions.</p>  
+<p><a title="" href="newtonHL.m"><span style="font-size: large;">newtonHL.m</span></a> Newton-Raphson method to find solutions.</p>  
+<p><a title="" href="value1.m"><span style="font-size: large;">value1.m</span></a> Computes today's values for type L and H.</p>  
+<p><a title="" href="valueL.m"><span style="font-size: large;">valueL.m</span></a> Returns today's value for type L given bid price.</p>  
+<p><a title="" href="valueH.m"><span style="font-size: large;">valueH.m</span></a> Returns today's value for type H given ask price.</p>  
+
 </div>
 
 <center>
 <p><a title="" href="http://www.shinotakayama.com">To Index Page</a></p>
-  
-Write an email to <a href="mailto:s.takayama1@uq.edu.au">Shino</a> if you have any questions. <br/> <br/>
-  <span style="color: #ff0000; font-size: small;">Copyright Shino Takayama </span></center>
+Write an email to <a href="mailto:s.takayama1@uq.edu.au">Shino</a> if you have any questions. <br/><br/>
+<span style="color: #ff0000; font-size: small;">Copyright Shino Takayama</span></center>
 </body>
 </html>
 
