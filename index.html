@@ -1,63 +1,150 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/teaching/assets/css/style.css?v=0ce2849...">
+<html lang="en">
 <head>
-  <title>Information and Price</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information and Price in Dynamic Financial Markets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .link-section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .link-section h2 {
+            font-size: 22px;
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+
+        .code-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .code-links li {
+            padding: 8px 0;
+        }
+
+        .code-links a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .code-links a:hover {
+            color: #c0392b;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+
+    </style>
 </head>
-<html>
 
 <body>
 
-<p align="center"><span style="font-size: x-large;">Information and Price in Dynamic Financial Markets</span></p>
-<p align="center"><font size="4">This is a set of computer codes that computes equilibrium strategies for 
-<a title="" href="https://www.sciencedirect.com/science/article/abs/pii/S016518892100021X">Price manipulation, dynamic informed trading, and the uniqueness of equilibrium in sequential trading</a> 
-(Journal of Economic Dynamic and Control, 2021)
-</font></p>
+    <header>
+        Information and Price in Dynamic Financial Markets
+    </header>
 
-<div id="Codes">
-<p><a title="" href="mainprog.m"><span style="font-size: large;">mainprog.m</span></a> This program solves the equilibrium.</p>
-<p><a title="" href="savere.m"><span style="font-size: large;">savere.m</span></a> This program saves the simulation results.</p>
-<p><a title="" href="jacHL.m"><span style="font-size: large;">jacHL.m</span></a> This program is used to check the bug whenever any issue arises.</p>
+    <div class="container">
+        <h1>Computer Codes for Equilibrium Strategies</h1>
+        <p>This set of MATLAB codes computes equilibrium strategies for the paper:  
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S016518892100021X" target="_blank">
+                "Price Manipulation, Dynamic Informed Trading, and the Uniqueness of Equilibrium in Sequential Trading"
+            </a> (Journal of Economic Dynamic and Control, 2021).
+        </p>
 
-<div id="Functions">  
-<p><a title="" href="nextvalue.m"><span style="font-size: large;">nextvalue.m</span></a> nextvalue(x, int, b, m, f) computes the value of a function.</p>
-<p><a title="" href="ask.m"><span style="font-size: large;">ask.m</span></a> ask(b, u, r, hb, ls) computes ask price via Bayes' rule.</p>  
-<p><a title="" href="bid.m"><span style="font-size: large;">bid.m</span></a> bid(b, u, r, hb, ls) computes bid price via Bayes' rule.</p>
-<p><a title="" href="fd.m"><span style="font-size: large;">fd.m</span></a> fd(x0, x1, b, f) finds the interval to which the value f belongs.</p>
-<p><a title="" href="incentive.m"><span style="font-size: large;">incentive.m</span></a> Computes incentive compatibility.</p>
+        <div class="link-section">
+            <h2>Main Programs</h2>
+            <ul class="code-links">
+                <li><a href="mainprog.m">mainprog.m</a> - Solves the equilibrium</li>
+                <li><a href="savere.m">savere.m</a> - Saves simulation results</li>
+                <li><a href="jacHL.m">jacHL.m</a> - Debugging tool</li>
+            </ul>
+        </div>
 
-<p><a title="" href="highbuy.m"><span style="font-size: large;">highbuy.m</span></a> Computes profit for High to buy.</p>
-<p><a title="" href="highsell.m"><span style="font-size: large;">highsell.m</span></a> Computes profit for High to sell.</p>
-<p><a title="" href="lowbuy.m"><span style="font-size: large;">lowbuy.m</span></a> Computes profit for Low to buy.</p>
-<p><a title="" href="lowsell.m"><span style="font-size: large;">lowsell.m</span></a> Computes profit for Low to sell.</p>
+        <div class="link-section">
+            <h2>Functions</h2>
+            <ul class="code-links">
+                <li><a href="nextvalue.m">nextvalue.m</a> - Computes function values</li>
+                <li><a href="ask.m">ask.m</a> - Computes ask price via Bayes' rule</li>
+                <li><a href="bid.m">bid.m</a> - Computes bid price via Bayes' rule</li>
+                <li><a href="fd.m">fd.m</a> - Finds interval for a given value</li>
+                <li><a href="incentive.m">incentive.m</a> - Incentive compatibility calculations</li>
+            </ul>
+        </div>
 
-<p><a title="" href="checkH.m"><span style="font-size: large;">checkH.m</span></a> Determines whether type H manipulates.</p>  
-<p><a title="" href="checkL.m"><span style="font-size: large;">checkL.m</span></a> Determines whether type L manipulates.</p>  
+        <a class="btn" href="http://www.shinotakayama.com">Visit Main Website</a>
 
-<p><a title="" href="calaskH.m"><span style="font-size: large;">calaskH.m</span></a> Finds ask price for type H.</p>  
-<p><a title="" href="calbidH.m"><span style="font-size: large;">calbidH.m</span></a> Computes bid price from calaskH.m.</p>  
-<p><a title="" href="calaskL.m"><span style="font-size: large;">calaskL.m</span></a> Finds ask price for type L.</p>  
-<p><a title="" href="calbidL.m"><span style="font-size: large;">calbidL.m</span></a> Computes bid price from calaskL.m.</p>  
+        <footer>
+            <p>For inquiries, email: <a href="mailto:s.takayama1@uq.edu.au">Shino Takayama</a></p>
+            <p>&copy; 2024 Shino Takayama. All Rights Reserved.</p>
+        </footer>
+    </div>
 
-<p><a title="" href="sol2real.m"><span style="font-size: large;">sol2real.m</span></a> Solves ax^2 + bx + c = 0 for two solutions.</p>  
-<p><a title="" href="diffun.m"><span style="font-size: large;">diffun.m</span></a> Computes profit differences between strategies.</p>  
-<p><a title="" href="fixedHL.m"><span style="font-size: large;">fixedHL.m</span></a> Returns strategies for type H and L when both manipulate.</p>  
-<p><a title="" href="myfunHL.m"><span style="font-size: large;">myfunHL.m</span></a> Computes approximated indifference conditions.</p>  
-<p><a title="" href="newtonHL.m"><span style="font-size: large;">newtonHL.m</span></a> Newton-Raphson method to find solutions.</p>  
-<p><a title="" href="value1.m"><span style="font-size: large;">value1.m</span></a> Computes today's values for type L and H.</p>  
-<p><a title="" href="valueL.m"><span style="font-size: large;">valueL.m</span></a> Returns today's value for type L given bid price.</p>  
-<p><a title="" href="valueH.m"><span style="font-size: large;">valueH.m</span></a> Returns today's value for type H given ask price.</p>  
-
-</div>
-
-<center>
-<p><a title="" href="http://www.shinotakayama.com">To Index Page</a></p>
-Write an email to <a href="mailto:s.takayama1@uq.edu.au">Shino</a> if you have any questions. <br/><br/>
-<span style="color: #ff0000; font-size: small;">Copyright Shino Takayama</span></center>
 </body>
 </html>
 
-<style>
-  #lectures {
-    margin-left: 30vw;
-  }
-</style>
