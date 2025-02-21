@@ -120,37 +120,51 @@
         <div class="link-section">
             <h2>Main Programs</h2>
             <ul class="code-links">
-                <li><a href="mainprog.m">mainprog.m</a> - Solves the equilibrium.</li>
-                <li><a href="savere.m">savere.m</a> - Saves simulation results.</li>
-                <li><a href="jacHL.m">jacHL.m</a> - Used to check for bugs.</li>
+                <li><a href="mainprog.m">mainprog.m</a> - This program solves the equilibrium.</li>
+                <li><a href="plotfig.m">plotfig.m</a> - Produces pictures from the result (**.mat**).</li>
+                <li><a href="savere.m">savere.m</a> - Saves the simulation results.</li>
+                <li><a href="jactry.m">jactry.m</a> - Used to check for bugs when issues arise.</li>
             </ul>
         </div>
 
         <div class="link-section">
             <h2>Functions</h2>
             <ul class="code-links">
-                <li><a href="nextvalue.m">nextvalue.m</a> - Computes function values.</li>
+                <li><a href="nextvalue.m">nextvalue.m</a> - Computes the function value: `m(int) * (x - b(int)) + f(int)`.</li>
                 <li><a href="ask.m">ask.m</a> - Computes ask price via Bayes' rule.</li>
                 <li><a href="bid.m">bid.m</a> - Computes bid price via Bayes' rule.</li>
-                <li><a href="fd.m">fd.m</a> - Finds interval to which value f belongs.</li>
-                <li><a href="incentive.m">incentive.m</a> - Computes incentive compatibility.</li>
+                <li><a href="fd.m">fd.m</a> - Finds the interval `[b(j), b(j+1))` to which value `f` belongs.</li>
+                <li><a href="profits.m">profits.m</a> - Computes profit for each strategy given price and value functions.</li>
+                <li><a href="incentive.m">incentive.m</a> - Checks if honest strategy is incentive-compatible.</li>
             </ul>
         </div>
 
         <div class="link-section">
-            <h2>Additional Functions</h2>
+            <h2>Trading & Strategy Functions</h2>
             <ul class="code-links">
                 <li><a href="highbuy.m">highbuy.m</a> - Computes profit for High to buy.</li>
                 <li><a href="highsell.m">highsell.m</a> - Computes profit for High to sell.</li>
                 <li><a href="lowbuy.m">lowbuy.m</a> - Computes profit for Low to buy.</li>
                 <li><a href="lowsell.m">lowsell.m</a> - Computes profit for Low to sell.</li>
-                <li><a href="checkH.m">checkH.m</a> - Determines whether type H manipulates.</li>
-                <li><a href="checkL.m">checkL.m</a> - Determines whether type L manipulates.</li>
+            </ul>
+        </div>
+
+        <div class="link-section">
+            <h2>Equilibrium & Indifference Conditions</h2>
+            <ul class="code-links">
+                <li><a href="checkH.m">checkH.m</a> - Determines if type H manipulates.</li>
+                <li><a href="checkL.m">checkL.m</a> - Determines if type L manipulates.</li>
                 <li><a href="calaskH.m">calaskH.m</a> - Finds ask price for type H.</li>
                 <li><a href="calbidH.m">calbidH.m</a> - Computes bid price from calaskH.m.</li>
                 <li><a href="calaskL.m">calaskL.m</a> - Finds ask price for type L.</li>
                 <li><a href="calbidL.m">calbidL.m</a> - Computes bid price from calaskL.m.</li>
-                <li><a href="sol2real.m">sol2real.m</a> - Solves ax² + bx + c = 0 for two solutions.</li>
+            </ul>
+        </div>
+
+        <div class="link-section">
+            <h2>Mathematical Computation Functions</h2>
+            <ul class="code-links">
+                <li><a href="sol2real.m">sol2real.m</a> - Solves `ax² + bx + c = 0` for two solutions.</li>
                 <li><a href="diffun.m">diffun.m</a> - Computes profit differences between strategies.</li>
                 <li><a href="fixedHL.m">fixedHL.m</a> - Returns strategies for type H and L when both manipulate.</li>
                 <li><a href="myfunHL.m">myfunHL.m</a> - Computes approximated indifference conditions.</li>
@@ -172,8 +186,5 @@
 </body>
 </html>
 
-
-</body>
-</html>
 
 
